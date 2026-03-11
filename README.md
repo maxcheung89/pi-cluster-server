@@ -34,6 +34,10 @@ Page A (first 5s)                    Page B (next 5s)
 ## Hardware
 
 ### OLED Display
+<table>
+<tr>
+<td>
+
 | Spec | Value |
 |------|-------|
 | Size | 0.96 inch |
@@ -41,6 +45,18 @@ Page A (first 5s)                    Page B (next 5s)
 | Driver | SSD1306 |
 | Interface | I2C |
 | I2C Address | `0x3C` (default) or `0x3D` |
+
+</td>
+
+<td>
+
+<img src="https://github.com/user-attachments/assets/738a65ce-2999-49ea-a4c0-af42b83c7fbf" width="350">
+
+</td>
+</tr>
+</table>
+
+Where to Buy: https://www.amazon.com/dp/B09T6SJBV5?ref=ppx_yo2ov_dt_b_fed_asin_title&th=1
 
 ### Wiring (same on every Pi)
 ```
