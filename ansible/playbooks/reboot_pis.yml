@@ -1,0 +1,29 @@
+---
+# reboot_pis.yml
+# Reboots all Raspberry Pis and waits for them to come back online
+#
+# Usage:
+#   ansible-playbook -i inventory/hosts.ini reboot_pis.yml
+#   ansible-playbook -i inventory/hosts.ini reboot_pis.yml --limit slot1_ubuntu_desktop_8gb
+
+- name: Reboot all Raspberry Pis
+  hosts: pis
+  become: true
+
+  tasks:
+
+    - name: Show which Pis are about to reboot
+      debug:
+        msg: "Rebooting {{ inventory_hostname }} ({{ ansible_host }})..."
+
+    - name: Reboot
+      reboot:
+        msg: "Reboot triggered by Ansible"
+        reboot_timeout: 120        # wait up to 2 min for it to come back
+        pre_reboot_delay: 3        # 3s grace period before reboot fires
+        post_reboot_delay: 10      # wait 10s after SSH is back before continuing
+        test_command: uptime       # confirm system is healthy after reboot
+
+    - name: Confirm Pi is back online
+      debug:
+        msg: "{{ inventory_hostname }} ({{ ansible_host }}) is back online"
