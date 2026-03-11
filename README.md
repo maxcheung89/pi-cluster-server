@@ -4,6 +4,7 @@ A system monitor for 0.96" SSD1306 OLED displays (128×64px) deployed across
 5 Raspberry Pi 4B units via Ansible. All Pis show the same layout and flip
 pages in sync using wall-clock time — no coordination needed.
 
+![Untitledv1-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/b8781872-0bd2-467f-a7f2-d96a8b98dbe8)
 ---
 
 ## Display Layout
@@ -34,6 +35,9 @@ Page A (first 5s)                    Page B (next 5s)
 ## Hardware
 
 ### OLED Display
+
+![pihostv17-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f02b03b2-d187-4631-a2e7-2c1ef9144f31)
+
 <table>
 <tr>
 <td>
